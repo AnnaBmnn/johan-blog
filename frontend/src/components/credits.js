@@ -8,7 +8,13 @@ const Credits = ({ credits }) => {
         {credits.CreditsList.map((item, i) => (
           <li className="product" key={i}>
             {item.CreditsListsLabel} -
-            <a href={item.CreditsListUrl}>{item.CreditsListName}</a>
+            <a
+              target="_blank"
+              alt={`lien vers le site  de ${item.CreditsListName}`}
+              href={item.CreditsListUrl}
+            >
+              {item.CreditsListName}
+            </a>
           </li>
         ))}
       </ul>
