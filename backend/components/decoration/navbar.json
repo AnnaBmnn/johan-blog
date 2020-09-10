@@ -6,9 +6,15 @@
   },
   "options": {},
   "attributes": {
-    "navText": {
-      "type": "string",
-      "required": true
+    "ListLinksLeft": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "ListLinksRight": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
     }
   }
 }

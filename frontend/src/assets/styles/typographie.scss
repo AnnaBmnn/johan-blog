@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "ObjectSans";
+  src: url("../fonts/ObjectSans-Regular.eot");
+  src: local("ObjectSans Regular"), local("ObjectSans-Regular"),
+    url("../fonts/ObjectSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ObjectSans-Regular.woff2") format("woff2"),
+    url("../fonts/ObjectSans-Regular.woff") format("woff"),
+    url("../fonts/ObjectSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ObjectSans";
+  src: url("../fonts/ObjectSans-Thin.eot");
+  src: local("ObjectSans Thin"), local("ObjectSans-Thin"),
+    url("../fonts/ObjectSans-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ObjectSans-Thin.woff2") format("woff2"),
+    url("../fonts/ObjectSans-Thin.woff") format("woff"),
+    url("../fonts/ObjectSans-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP Woodland";
+  src: url("../fonts/PPWoodland-Bold.eot");
+  src: local("PPWoodland Bold"), local("PPWoodland-Bold"),
+    url("../fonts/PPWoodland-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PPWoodland-Bold.woff2") format("woff2"),
+    url("../fonts/PPWoodland-Bold.woff") format("woff"),
+    url("../fonts/PPWoodland-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP Woodland";
+  src: url("../fonts/PPWoodland-Regular.eot");
+  src: local("PPWoodland Regular"), local("PPWoodland-Regular"),
+    url("../fonts/PPWoodland-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PPWoodland-Regular.woff2") format("woff2"),
+    url("../fonts/PPWoodland-Regular.woff") format("woff"),
+    url("../fonts/PPWoodland-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP Woodland";
+  src: url("../fonts/PPWoodland-Ultralight.eot");
+  src: local("PPWoodland Ultralight"), local("PPWoodland-Ultralight"),
+    url("../fonts/PPWoodland-Ultralight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PPWoodland-Ultralight.woff2") format("woff2"),
+    url("../fonts/PPWoodland-Ultralight.woff") format("woff"),
+    url("../fonts/PPWoodland-Ultralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}

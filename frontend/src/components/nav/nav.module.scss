@@ -1,0 +1,35 @@
+@import "../../assets/styles/constants.scss";
+
+.nav__container {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 7vw;
+  width: 86vw;
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+}
+
+.nav__item {
+  list-style: none;
+  margin: 0 19px;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  color: $color-grey-900;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}

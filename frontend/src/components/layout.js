@@ -2,7 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Nav from "./nav"
+import "../assets/styles/main.scss"
+
+import Nav from "./nav/nav"
 import Seo from "./seo"
 
 const Layout = ({ children }) => (
@@ -22,17 +24,17 @@ const Layout = ({ children }) => (
         }
       }
     `}
-  render={data => (
-    <>
-      <Seo
+    render={data => (
+      <>
+        <Seo
           title={data.strapiHomepage.Seo.metaTitle}
           description={data.strapiHomepage.Seo.metaDescription}
           image={data.strapiHomepage.Seo.shareImage.image.url}
         />
-      <Nav />
-      <main>{children}</main>
-    </>
-  )}
+        <Nav />
+        <main>{children}</main>
+      </>
+    )}
   />
 )
 

@@ -24,30 +24,12 @@ const SEO = ({ title, description, image, article }) => {
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate} link={[
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Staatliches",
-      },
-      {
-        rel: "stylesheet",
-        href:
-          "https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css",
-      },
-    ]}
-    script={[
-      {
-        src:
-          "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js",
-      },
-      {
-        src:
-          "https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js",
-      },
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js",
-      }
-    ]}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      link={[]}
+      script={[]}
+    >
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
@@ -76,7 +58,6 @@ const SEO = ({ title, description, image, article }) => {
       )}
 
       {seo.image && <meta name="twitter:image" content={seo.image} />}
-
     </Helmet>
   )
 }

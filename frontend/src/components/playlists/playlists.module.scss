@@ -1,0 +1,8 @@
+.playlists__section {
+  text-align: center;
+}
+
+.playlists__iframe {
+  width: clamp(300px, 30vw, 500px);
+  margin-bottom: 30px;
+}

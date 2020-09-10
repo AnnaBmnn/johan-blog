@@ -2,10 +2,11 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import PlaylistsComponent from "../components/playlists"
-import CreditsComponent from "../components/credits"
+import PlaylistsComponent from "../components/playlists/playlists"
+import CreditsComponent from "../components/credits/credits"
+import HeroComponent from "../components/hero/hero"
 
-import "../assets/css/main.css"
+// import "../assets/css/main.css"
 
 const IndexPage = () => (
   <Layout>
@@ -32,11 +33,8 @@ const IndexPage = () => (
         }
       `}
       render={data => (
-        <div className="uk-section">
-          <div className="uk-container uk-container-large">
-            <h1>{data.strapiHomepage.Hero.HeroTitle}</h1>
-            <p>{data.strapiHomepage.Hero.HeroText}</p>
-          </div>
+        <div>
+          <HeroComponent hero={data.strapiHomepage.Hero} />
           <PlaylistsComponent playlists={data.strapiHomepage.Playlists} />
           <CreditsComponent credits={data.strapiHomepage.Credits} />
         </div>

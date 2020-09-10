@@ -1,12 +1,15 @@
 import React from "react"
 
+import playlistsStyles from "./playlists.module.scss"
+
 const Playlists = ({ playlists }) => {
   return (
-    <div>
+    <section className={playlistsStyles.playlists__section}>
       {playlists.map((item, i) =>
         item.PlaylistUrl ? (
-          <div className="product" key={i}>
+          <div key={i}>
             <iframe
+              className={playlistsStyles.playlists__iframe}
               title="spot"
               src={item.PlaylistUrl}
               width="300"
@@ -20,7 +23,7 @@ const Playlists = ({ playlists }) => {
           <div></div>
         )
       )}
-    </div>
+    </section>
   )
 }
 
