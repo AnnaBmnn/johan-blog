@@ -25,6 +25,16 @@
       "repeatable": false,
       "component": "decoration.hero",
       "required": true
+    },
+    "Playlists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "decoration.playlist"
+    },
+    "Credits": {
+      "type": "component",
+      "repeatable": false,
+      "component": "decoration.credits"
     }
   }
 }

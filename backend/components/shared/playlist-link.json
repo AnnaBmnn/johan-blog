@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_shared_playlist_links",
+  "info": {
+    "name": "PlaylistLink",
+    "icon": "volume-up"
+  },
+  "options": {},
+  "attributes": {}
+}

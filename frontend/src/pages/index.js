@@ -2,7 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import ArticlesComponent from "../components/articles"
+import PlaylistsComponent from "../components/playlists"
+import CreditsComponent from "../components/credits"
 
 import "../assets/css/main.css"
 
@@ -14,34 +15,17 @@ const IndexPage = () => (
           strapiHomepage {
             Hero {
               HeroText
+              HeroTitle
             }
-          }
-          allStrapiArticle(filter: {status: {eq: "published"}}) {
-            edges {
-              node {
-                strapiId
-                slug
-                title
-                category {
-                  name
-                }
-                image {
-                  childImageSharp {
-                      fixed(width: 800, height: 500) {
-                      	src
-                      }
-                  }
-                }
-                user {
-                  username
-                  image {
-                    childImageSharp {
-                        fixed(width: 30, height: 30) {
-                        	src
-                        }
-                    }
-                  }
-                }
+            Playlists {
+              PlaylistUrl
+            }
+            Credits {
+              CreditsTitle
+              CreditsList {
+                CreditsListsLabel
+                CreditsListName
+                CreditsListUrl
               }
             }
           }
@@ -50,9 +34,11 @@ const IndexPage = () => (
       render={data => (
         <div className="uk-section">
           <div className="uk-container uk-container-large">
-            <h1>{data.strapiHomepage.Hero.HeroText}</h1>
-            <ArticlesComponent articles={data.allStrapiArticle.edges} />
+            <h1>{data.strapiHomepage.Hero.HeroTitle}</h1>
+            <p>{data.strapiHomepage.Hero.HeroText}</p>
           </div>
+          <PlaylistsComponent playlists={data.strapiHomepage.Playlists} />
+          <CreditsComponent credits={data.strapiHomepage.Credits} />
         </div>
       )}
     />

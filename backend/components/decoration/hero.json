@@ -7,8 +7,11 @@
   "options": {},
   "attributes": {
     "HeroText": {
-      "type": "string",
+      "type": "text",
       "required": true
+    },
+    "HeroTitle": {
+      "type": "string"
     }
   }
 }

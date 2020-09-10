@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_credits_lists",
+  "info": {
+    "name": "CreditsList",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "CreditsListName": {
+      "type": "string"
+    },
+    "CreditsListsLabel": {
+      "type": "string"
+    },
+    "CreditsListUrl": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_decoration_credits",
+  "info": {
+    "name": "Credits",
+    "icon": "medal"
+  },
+  "options": {},
+  "attributes": {
+    "CreditsTitle": {
+      "type": "string"
+    },
+    "CreditsList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.credits-list"
+    }
+  }
+}

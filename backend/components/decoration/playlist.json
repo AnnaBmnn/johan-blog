@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_decoration_playlists",
+  "info": {
+    "name": "Playlists",
+    "icon": "music"
+  },
+  "options": {},
+  "attributes": {
+    "PlaylistUrl": {
+      "type": "string"
+    }
+  }
+}
