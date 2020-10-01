@@ -23,7 +23,7 @@ const Article = ({ articleData }) => {
           </MDXProvider>
         </div>
         <div className={`grid__col-10--center`}>
-          Ò <img src={articleData.image.publicURL}></img>
+          <img src={articleData.image.publicURL}></img>
         </div>
       </div>
       <SeparatorComponent></SeparatorComponent>
