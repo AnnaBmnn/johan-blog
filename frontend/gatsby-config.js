@@ -31,6 +31,14 @@ module.exports = {
         queryLimit: 1000,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /inline/,
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {

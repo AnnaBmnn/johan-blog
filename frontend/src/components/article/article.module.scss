@@ -1,0 +1,12 @@
+@import "../../assets/styles/constants.scss";
+
+.article {
+  padding: 15vh 0 20vh;
+  @media screen and (max-width: 600px) {
+    padding: 7vh 0 10vh;
+  }
+}
+
+.article__txt {
+  margin-bottom: 30px;
+}

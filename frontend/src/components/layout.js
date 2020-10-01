@@ -7,7 +7,7 @@ import "../assets/styles/main.scss"
 import Nav from "./nav/nav"
 import Seo from "./seo"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, theme }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -32,13 +32,14 @@ const Layout = ({ children }) => (
           image={data.strapiHomepage.Seo.shareImage.image.url}
         />
         <Nav />
-        <main>{children}</main>
+        <main className={`theme--${theme}`}>{children}</main>
       </>
     )}
   />
 )
 
 Layout.propTypes = {
+  theme: String,
   children: PropTypes.node.isRequired,
 }
 

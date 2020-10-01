@@ -1,0 +1,33 @@
+.grid {
+  width: 86vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+    column-gap: 0px;
+  }
+}
+
+.grid__col-12 {
+  grid-column: 1 / 13;
+}
+
+.grid__col-8--center {
+  grid-column: 3 / 11;
+  @media screen and (max-width: 600px) {
+    grid-column: 2 / 12;
+  }
+}
+
+.grid__col-6--center {
+  grid-column: 4 / 10;
+  @media screen and (max-width: 600px) {
+    grid-column: 3 / 11;
+  }
+}
+
+.grid__col-10--center {
+  grid-column: 2 / 12;
+}

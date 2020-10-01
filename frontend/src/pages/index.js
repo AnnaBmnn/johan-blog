@@ -9,7 +9,7 @@ import HeroComponent from "../components/hero/hero"
 // import "../assets/css/main.css"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout theme={`main`}>
     <StaticQuery
       query={graphql`
         query {

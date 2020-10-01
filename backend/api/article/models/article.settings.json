@@ -60,6 +60,22 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "articles"
+    },
+    "Playlists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "decoration.playlist"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
