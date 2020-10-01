@@ -31,7 +31,7 @@ const Layout = ({ children, theme }) => (
           description={data.strapiHomepage.Seo.metaDescription}
           image={data.strapiHomepage.Seo.shareImage.image.url}
         />
-        <Nav />
+        <Nav theme={theme} />
         <main className={`theme--${theme}`}>{children}</main>
       </>
     )}
@@ -39,7 +39,7 @@ const Layout = ({ children, theme }) => (
 )
 
 Layout.propTypes = {
-  theme: String,
+  theme: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
 

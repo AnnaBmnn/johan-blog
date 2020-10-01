@@ -1,9 +1,11 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 
+import Logo from "../logo/logo"
+
 import navStyles from "./nav.module.scss"
 
-const Nav = () => (
+const Nav = ({ theme }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -38,6 +40,7 @@ const Nav = () => (
             )}
           </ul>
         </nav>
+        {theme == "basic" ? <Logo></Logo> : ""}
         <nav>
           <ul className={navStyles.nav__list}>
             {data.strapiHomepage.Nav.ListLinksRight.map((item, i) =>
