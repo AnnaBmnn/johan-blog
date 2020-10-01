@@ -23,8 +23,7 @@ const Article = ({ articleData }) => {
           </MDXProvider>
         </div>
         <div className={`grid__col-10--center`}>
-          <Img fluid={articleData.image.publicURL} objectFit="cover" />
-          <img src={articleData.image.publicURL}></img>
+          Ò <img src={articleData.image.publicURL}></img>
         </div>
       </div>
       <SeparatorComponent></SeparatorComponent>
