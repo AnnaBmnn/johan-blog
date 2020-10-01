@@ -46,7 +46,6 @@ const Category = ({ data }) => {
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>{category}</h1>
-          <ArticlesComponent articles={articles} />
         </div>
       </div>
     </Layout>
