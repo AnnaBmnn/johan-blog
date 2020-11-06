@@ -56,26 +56,6 @@
   }
 }
 
-.nav__openBurger {
-  display: none;
-  position: absolute;
-  right: 5vw;
-  top: 6vh;
-  cursor: pointer;
-  @media screen and (max-width: 935px) {
-    display: block;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: center / contain no-repeat url(../../images/separator.png);
-  }
-}
-
 .nav__item {
   list-style: none;
   margin: 0 19px;
@@ -107,7 +87,28 @@
   @media screen and (max-width: 935px) {
     display: block;
     position: absolute;
-    right: 5vw;
-    top: 6vh;
+    right: 8.4vw;
+    top: 5.7vh;
+  }
+}
+
+.nav__openBurger {
+  display: none;
+  position: absolute;
+  right: 8.4vw;
+  top: 5.7vh;
+  cursor: pointer;
+  font-size: 0.75rem;
+  @media screen and (max-width: 935px) {
+    display: block;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: center / contain no-repeat url(../../images/separator.png);
   }
 }

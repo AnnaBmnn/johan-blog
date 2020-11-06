@@ -461,3 +461,20 @@ a.is-active {
 .is-open {
   transform: translateX(0) !important;
 }
+
+.is-outside {
+  position: absolute;
+  top: 24px;
+  transform: translate(-50%, 0%);
+}
+
+.is-inside {
+  position: absolute;
+  top: 0px;
+  transform: translate(-50%, -25%);
+  display: none;
+
+  @media screen and (max-width: 935px) {
+    display: block;
+  }
+}

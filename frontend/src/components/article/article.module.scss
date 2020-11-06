@@ -1,7 +1,7 @@
 @import "../../assets/styles/constants.scss";
 
 .article {
-  padding: 15vh 0 20vh;
+  padding: 20vh 0 20vh;
   @media screen and (max-width: 600px) {
     padding: 7vh 0 10vh;
   }
@@ -9,4 +9,10 @@
 
 .article__txt {
   margin-bottom: 30px;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
 }

@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 
 import logoStyles from "./logo.module.scss"
 
-const Logo = ({}) => {
+const Logo = ({ className }) => {
   return (
-    <Link to={`/`} className={logoStyles.logo}>
-      <h2 className={logoStyles.logo}>Johan Pham</h2>
+    <Link to={`/`} className={`${logoStyles.logo} ${className}`}>
+      <h2 className={`${logoStyles.logo} ${className}`}>Johan Pham</h2>
     </Link>
   )
 }

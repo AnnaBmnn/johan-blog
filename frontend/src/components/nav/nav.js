@@ -74,6 +74,8 @@ const Nav = ({ theme }) => {
                 <img src={Img} atl="leef" className={navStyles.nav__img}></img>
               </ul>
             </nav>
+            {theme == "basic" ? <Logo className="is-inside"></Logo> : ""}
+
             <nav>
               <ul className={`${navStyles.nav__list} ${navStyles.nav__social}`}>
                 {data.strapiHomepage.Nav.ListLinksRight.map((item, i) =>
