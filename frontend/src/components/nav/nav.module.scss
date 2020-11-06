@@ -3,18 +3,77 @@
 .nav__container {
   z-index: 10;
   position: absolute;
-  top: 0;
+  top: 58px;
   left: 7vw;
   width: 86vw;
-  padding-top: 58px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 935px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    background-color: $color-light;
+    transform: translate(-100%, 0);
+  }
 }
 
 .nav__list {
   display: flex;
   margin: 0;
+  @media screen and (max-width: 935px) {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+.nav__menu {
+  @media screen and (max-width: 935px) {
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    .nav__item {
+      margin: 0 0 24px 0;
+    }
+  }
+}
+
+.nav__social {
+  @media screen and (max-width: 935px) {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.nav__openBurger {
+  display: none;
+  position: absolute;
+  right: 5vw;
+  top: 6vh;
+  cursor: pointer;
+  @media screen and (max-width: 935px) {
+    display: block;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: center / contain no-repeat url(../../images/separator.png);
+  }
 }
 
 .nav__item {
@@ -33,4 +92,22 @@
   color: $color-grey-900;
   font-size: 0.875rem;
   line-height: 0.875rem;
+}
+
+.nav__img {
+  display: none;
+  @media screen and (max-width: 935px) {
+    display: block;
+    margin-top: 3vh;
+  }
+}
+
+.nav__close {
+  display: none;
+  @media screen and (max-width: 935px) {
+    display: block;
+    position: absolute;
+    right: 5vw;
+    top: 6vh;
+  }
 }

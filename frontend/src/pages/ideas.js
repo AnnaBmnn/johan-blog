@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import ArticlesComponent from "../components/articles"
 import SommaireComponent from "../components/sommaire/sommaire"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -42,7 +42,6 @@ const Ideas = ({ data }) => {
     <Layout theme={`basic`} className={`is-intro`}>
       <Seo title={"Idées"} description={"voilà mes idées"} />
       <SommaireComponent articles={articles} />
-      <ArticlesComponent articles={articles} />
     </Layout>
   )
 }

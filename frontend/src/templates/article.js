@@ -34,16 +34,6 @@ export const query = graphql`
           body
         }
       }
-      user {
-        username
-        image {
-          childImageSharp {
-            fixed(width: 30, height: 30) {
-              src
-            }
-          }
-        }
-      }
     }
   }
 `
@@ -57,6 +47,7 @@ const Article = ({ data }) => {
         description={articleData.Seo.metaDescription}
         image={articleData.Seo.shareImage.image.publicURL}
       />
+
       <ArticleComponent articleData={articleData}></ArticleComponent>
     </Layout>
   )

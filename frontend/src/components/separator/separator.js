@@ -1,7 +1,6 @@
 import React from "react"
 
 import SeparatorSvg from "../../inline/separator.inline.svg"
-import separatorImg from "../../images/separator.png"
 
 import separatorStyles from "./separator.module.scss"
 
