@@ -4,7 +4,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 
 import Logo from "../logo/logo"
 import Img from "../../images/menu.svg"
-import CloseImg from "../../images/Close.svg"
+import CloseImg from "../../images/close.svg"
 import navStyles from "./nav.module.scss"
 
 const Nav = ({ theme }) => {
