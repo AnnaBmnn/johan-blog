@@ -12,6 +12,9 @@ export const query = graphql`
       title
       content
       publishedAt
+      Playlists {
+        PlaylistUrl
+      }
       Seo {
         metaDescription
         metaTitle
