@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ArticleComponent from "../components/article/article"
 
-const query = graphql`
+export const query = graphql`
   query ArticleQuery($slug: String!) {
     strapiArticle(slug: { eq: $slug }, status: { eq: "published" }) {
       strapiId
