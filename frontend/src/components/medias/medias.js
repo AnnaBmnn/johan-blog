@@ -4,7 +4,7 @@ import mediasStyles from "./medias.module.scss"
 
 const Medias = ({ medias }) => {
   return (
-    <div>
+    <div className={mediasStyles.medias__container}>
       {medias?.map((media, i) =>
         media.url ? <img src={media.url}></img> : ""
       )}
