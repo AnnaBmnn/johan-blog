@@ -45,8 +45,8 @@
       "model": "category",
       "via": "articles"
     },
-    "image": {
-      "model": "file",
+    "medias": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "files",
@@ -54,7 +54,7 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
     },
     "user": {
       "plugin": "users-permissions",
@@ -65,17 +65,6 @@
       "type": "component",
       "repeatable": true,
       "component": "decoration.playlist"
-    },
-    "media": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
     }
   }
 }
