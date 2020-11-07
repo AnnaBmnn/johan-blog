@@ -61,7 +61,7 @@ const Nav = ({ theme }) => {
                     <li key={i} className={navStyles.nav__item}>
                       <Link
                         className={navStyles.nav__link}
-                        to={`/${item.LinkUrl}`}
+                        to={`${item.LinkUrl}`}
                         activeClassName={`is-active`}
                       >
                         {item.LinkTexte}

@@ -2,6 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 
 import ArticleHeaderComponent from "../articleHeader/articleHeader"
+import PlaylistsComponent from "../playlists/playlists"
+
 import SeparatorComponent from "../separator/separator"
 import { MDXProvider } from "@mdx-js/react"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
@@ -23,7 +25,16 @@ const Article = ({ articleData }) => {
           </MDXProvider>
         </div>
         <div className={`grid__col-10--center`}>
-          <img src={articleData.image.publicURL}></img>
+          {articleData.Playlists ? (
+            <PlaylistsComponent playlists={articleData.Playlists} />
+          ) : (
+            ""
+          )}
+          {articleData.image.publicURL ? (
+            <img src={articleData.image.publicURL}></img>
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <SeparatorComponent></SeparatorComponent>

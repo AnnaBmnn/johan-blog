@@ -12,6 +12,7 @@
   font-weight: 500;
   font-family: $PPWoodland;
   margin: 0;
+  z-index: 2;
   @media screen and (max-width: 935px) {
     font-size: 1.625rem;
     transform: translate(-50%, 0);

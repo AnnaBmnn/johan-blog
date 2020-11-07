@@ -1,7 +1,7 @@
 @import "../../assets/styles/constants.scss";
 
 .nav__container {
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   top: 58px;
   left: 7vw;
@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 935px) {
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
