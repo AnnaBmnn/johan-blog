@@ -16,14 +16,6 @@ export const query = graphql`
         node {
           slug
           title
-          image {
-            publicURL
-            childImageSharp {
-              fixed(width: 660) {
-                src
-              }
-            }
-          }
           childStrapiArticleContent {
             childMdx {
               body

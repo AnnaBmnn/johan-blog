@@ -21,14 +21,13 @@ export const query = graphql`
           }
         }
       }
-      image {
-        publicURL
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
+      Playlists {
+        PlaylistUrl
       }
+      medias {
+        url
+      }
+
       childStrapiArticleContent {
         childMdx {
           body

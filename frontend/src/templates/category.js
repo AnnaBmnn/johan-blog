@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import ArticlesComponent from "../components/articles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -17,13 +16,6 @@ export const query = graphql`
           category {
             name
           }
-          image {
-            childImageSharp {
-              fixed(width: 660) {
-                src
-              }
-            }
-          }
         }
       }
     }
@@ -34,7 +26,6 @@ export const query = graphql`
 `
 
 const Category = ({ data }) => {
-  const articles = data.articles.edges
   const category = data.category.name
 
   return (

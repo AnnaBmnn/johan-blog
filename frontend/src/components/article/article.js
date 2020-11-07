@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 
 import ArticleHeaderComponent from "../articleHeader/articleHeader"
 import PlaylistsComponent from "../playlists/playlists"
+import MediasComponent from "../medias/medias"
 
 import SeparatorComponent from "../separator/separator"
 import { MDXProvider } from "@mdx-js/react"
@@ -30,8 +31,8 @@ const Article = ({ articleData }) => {
           ) : (
             ""
           )}
-          {articleData.image.publicURL ? (
-            <img src={articleData.image.publicURL}></img>
+          {articleData.medias ? (
+            <MediasComponent medias={articleData.medias} />
           ) : (
             ""
           )}
