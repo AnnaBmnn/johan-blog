@@ -6,10 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "HeroText": {
-      "type": "text",
-      "required": true
-    },
     "HeroTitle": {
       "type": "string"
     },
