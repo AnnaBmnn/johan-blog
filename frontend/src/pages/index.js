@@ -16,7 +16,6 @@ const IndexPage = () => (
           strapiHomepage {
             Hero {
               HeroTitle
-              HeroText
               HeroContent
             }
             Playlists {

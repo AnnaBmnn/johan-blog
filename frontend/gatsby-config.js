@@ -10,6 +10,9 @@ module.exports = {
     url: process.env.API_URL || "http://localhost:1337", // No trailing slash allowed!
     image: "/uploads/default-image.jpeg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@AnnaBmnn",
+    appleTouch = "src/images/gatsby-icon.png",
+    favicon32 = "src/images/gatsby-icon.png",
+    favicon16 = "src/images/gatsby-icon.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -47,9 +50,10 @@ module.exports = {
         name: "gatsby-starter-default",
         short_name: "starter",
         start_url: "/",
-        background_color: "#663399",
-        theme_color: "#663399",
+        background_color: "#a2b4a8",
+        theme_color: "#a2b4a8",
         display: "minimal-ui",
+        icon: "src/images/gatsby-icon.png",
       },
     },
     "gatsby-plugin-offline",
