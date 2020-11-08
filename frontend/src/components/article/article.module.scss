@@ -2,6 +2,7 @@
 
 .article {
   padding: 20vh 0 20vh;
+  min-height: 82vh;
   @media screen and (max-width: 600px) {
     padding: 7vh 0 10vh;
   }
@@ -10,10 +11,11 @@
 .article__txt {
   margin-bottom: 30px;
   font-size: 1.125rem;
-  line-height: 1.2;
+  line-height: 1.6;
+  font-weight: 500;
   @media screen and (max-width: 600px) {
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.6;
   }
   img {
     margin-bottom: 24px;

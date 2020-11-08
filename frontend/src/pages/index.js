@@ -15,8 +15,9 @@ const IndexPage = () => (
         query {
           strapiHomepage {
             Hero {
-              HeroText
               HeroTitle
+              HeroText
+              HeroContent
             }
             Playlists {
               PlaylistUrl
@@ -33,10 +34,14 @@ const IndexPage = () => (
         }
       `}
       render={data => (
-        <div>
-          <HeroComponent hero={data.strapiHomepage.Hero} />
-          <PlaylistsComponent playlists={data.strapiHomepage.Playlists} />
-          <CreditsComponent credits={data.strapiHomepage.Credits} />
+        <div className={`grid `}>
+          <div className={`grid__col-8`}>
+            <HeroComponent hero={data.strapiHomepage.Hero} />
+          </div>
+          <div className={`grid__col-12 grid__col-10-s`}>
+            <PlaylistsComponent playlists={data.strapiHomepage.Playlists} />
+            <CreditsComponent credits={data.strapiHomepage.Credits} />
+          </div>
         </div>
       )}
     />

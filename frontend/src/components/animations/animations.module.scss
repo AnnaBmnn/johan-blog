@@ -1,0 +1,75 @@
+.animations__fireTache {
+  position: absolute;
+  right: 13.5vw;
+  top: 32vh;
+  width: 4.5vw;
+  @media screen and (max-width: 600px) {
+    width: 14vw;
+    top: 14vh;
+    right: 7.5vw;
+  }
+}
+
+.animations__fire {
+  position: absolute;
+  right: 13.5vw;
+  top: 33vh;
+  width: 6vw;
+  @media screen and (max-width: 600px) {
+    width: 16vw;
+    top: 15vh;
+    right: 7vw;
+  }
+}
+.animations__objects {
+  position: absolute;
+  left: 20vw;
+  bottom: -25vh;
+  width: 30vw;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+.animations__leef {
+  position: absolute;
+  right: 20vw;
+  top: 37vh;
+  width: 14vw;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.animations__guitare {
+  position: absolute;
+  right: 25vw;
+  top: 85vh;
+  width: 16vw;
+  @media screen and (max-width: 600px) {
+    right: unset;
+    left: 8vw;
+    width: 50vw;
+    top: 65vh;
+  }
+}
+
+.animations__vase {
+  position: absolute;
+  right: 8vw;
+  top: 65vh;
+  width: 13vh;
+  @media screen and (max-width: 600px) {
+    width: 10vh;
+    top: 50vh;
+  }
+}
+
+.animations__tente {
+  position: absolute;
+  right: 9vw;
+  top: 19vh;
+  width: 9vw;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}

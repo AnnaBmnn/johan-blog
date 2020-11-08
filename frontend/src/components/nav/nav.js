@@ -1,14 +1,18 @@
-import React from "react"
-import { useState } from "react"
+import React, { useEffect, createRef, useState } from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 
+import lottie from "lottie-web"
+import animationLeef from "../../json/leef.json"
 import Logo from "../logo/logo"
 import Img from "../../images/menu.svg"
+import HoverImg from "../../images/hover.svg"
 import CloseImg from "../../images/Close.svg"
+import BurgerImg from "../../images/burger.svg"
 import navStyles from "./nav.module.scss"
 
 const Nav = ({ theme }) => {
   const [open, setOpen] = useState(false)
+  let animationLeefContainer = createRef()
 
   const clickHandlerOpenMenu = () => {
     setOpen(true)
@@ -16,6 +20,19 @@ const Nav = ({ theme }) => {
   const clickHandlerCloseMenu = () => {
     setOpen(false)
   }
+
+  useEffect(() => {
+    const animLeef = lottie.loadAnimation({
+      container: animationLeefContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animationLeef,
+    })
+    return () => {
+      animLeef.destroy()
+    }
+  }, [])
 
   return (
     <StaticQuery
@@ -41,13 +58,15 @@ const Nav = ({ theme }) => {
             className={`${navStyles.nav__openBurger} js-open-burger`}
             onClick={clickHandlerOpenMenu}
           >
-            Menu
+            <img src={BurgerImg}></img>
           </div>
-          {theme == "basic" ? <Logo className="is-outside"></Logo> : ""}
+          <Logo
+            className={`is-outside  ${theme == "basic" ? "" : "is-for-index"}`}
+          ></Logo>
           <header
             className={`${navStyles.nav__container} ${
               open ? "is-open" : "is-close"
-            }`}
+            } ${theme == "basic" ? "" : navStyles.nav__containerIndex}`}
           >
             <img
               src={CloseImg}
@@ -61,29 +80,40 @@ const Nav = ({ theme }) => {
                     <li key={i} className={navStyles.nav__item}>
                       <Link
                         className={navStyles.nav__link}
-                        to={`${item.LinkUrl}`}
+                        to={`/${item.LinkUrl}`}
                         activeClassName={`is-active`}
                       >
                         {item.LinkTexte}
                       </Link>
+                      <img
+                        className={navStyles.nav__linkBg}
+                        src={HoverImg}
+                      ></img>
                     </li>
                   ) : (
                     <div></div>
                   )
                 )}
-                <img src={Img} atl="leef" className={navStyles.nav__img}></img>
+                <div
+                  className={`${navStyles.nav__img}`}
+                  ref={animationLeefContainer}
+                />
               </ul>
             </nav>
-            {theme == "basic" ? <Logo className="is-inside"></Logo> : ""}
+            <Logo className="is-inside"></Logo>
 
             <nav>
               <ul className={`${navStyles.nav__list} ${navStyles.nav__social}`}>
                 {data.strapiHomepage.Nav.ListLinksRight.map((item, i) =>
                   item.LinkTexte ? (
                     <li key={i} className={navStyles.nav__item}>
-                      <Link className={navStyles.nav__link} to={item.LinkUrl}>
+                      <a className={navStyles.nav__link} href={item.LinkUrl}>
                         {item.LinkTexte}
-                      </Link>
+                      </a>
+                      <img
+                        className={navStyles.nav__linkBg}
+                        src={HoverImg}
+                      ></img>
                     </li>
                   ) : (
                     <div></div>

@@ -12,6 +12,9 @@
     },
     "HeroTitle": {
       "type": "string"
+    },
+    "HeroContent": {
+      "type": "richtext"
     }
   }
 }

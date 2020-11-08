@@ -27,6 +27,11 @@
   display: block;
   margin-bottom: 16px;
   font-weight: 100;
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .sommaire__link {
@@ -37,5 +42,10 @@
   line-height: 1.2;
   &:hover {
     text-decoration: underline;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    width: 80%;
+    margin: 0 auto;
   }
 }
