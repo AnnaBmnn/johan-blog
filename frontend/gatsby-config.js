@@ -10,9 +10,9 @@ module.exports = {
     url: process.env.API_URL || "http://localhost:1337", // No trailing slash allowed!
     image: "/uploads/default-image.jpeg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@AnnaBmnn",
-    appleTouch = "src/images/gatsby-icon.png",
-    favicon32 = "src/images/gatsby-icon.png",
-    favicon16 = "src/images/gatsby-icon.png",
+    appleTouch: "src/images/gatsby-icon.png",
+    favicon32: "src/images/gatsby-icon.png",
+    favicon16: "src/images/gatsby-icon.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
