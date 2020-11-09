@@ -1,5 +1,6 @@
 .animations__fireTache {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   right: 13.5vw;
   top: 32vh;
   width: 4.5vw;
@@ -11,7 +12,8 @@
 }
 
 .animations__fire {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   right: 13.5vw;
   top: 33vh;
   width: 6vw;
@@ -22,16 +24,18 @@
   }
 }
 .animations__objects {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   left: 20vw;
-  bottom: -25vh;
-  width: 30vw;
+  bottom: -10vh;
+  width: 25vw;
   @media screen and (max-width: 600px) {
     display: none;
   }
 }
 .animations__leef {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   right: 20vw;
   top: 37vh;
   width: 14vw;
@@ -41,9 +45,10 @@
 }
 
 .animations__guitare {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   right: 25vw;
-  top: 85vh;
+  top: 80vh;
   width: 16vw;
   @media screen and (max-width: 600px) {
     right: unset;
@@ -54,7 +59,8 @@
 }
 
 .animations__vase {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   right: 8vw;
   top: 65vh;
   width: 13vh;
@@ -65,7 +71,8 @@
 }
 
 .animations__tente {
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   right: 9vw;
   top: 19vh;
   width: 9vw;

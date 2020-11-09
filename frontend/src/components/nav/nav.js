@@ -66,7 +66,7 @@ const Nav = ({ theme }) => {
           <header
             className={`${navStyles.nav__container} ${
               open ? "is-open" : "is-close"
-            } ${theme == "basic" ? "" : navStyles.nav__containerIndex}`}
+            }`}
           >
             <img
               src={CloseImg}
@@ -107,7 +107,11 @@ const Nav = ({ theme }) => {
                 {data.strapiHomepage.Nav.ListLinksRight.map((item, i) =>
                   item.LinkTexte ? (
                     <li key={i} className={navStyles.nav__item}>
-                      <a className={navStyles.nav__link} href={item.LinkUrl}>
+                      <a
+                        className={navStyles.nav__link}
+                        href={item.LinkUrl}
+                        target="_blank"
+                      >
                         {item.LinkTexte}
                       </a>
                       <img
@@ -116,7 +120,7 @@ const Nav = ({ theme }) => {
                       ></img>
                     </li>
                   ) : (
-                    <div></div>
+                    <li></li>
                   )
                 )}
               </ul>

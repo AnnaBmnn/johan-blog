@@ -1,10 +1,10 @@
 @import "../../assets/styles/constants.scss";
 
 .logo {
-  position: absolute;
+  position: fixed;
   top: 24px;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  left: 3.5vw !important;
+  transform: translate(0%, 0%);
   white-space: nowrap;
   color: black;
   text-decoration: none;
@@ -12,7 +12,7 @@
   font-weight: 500;
   font-family: $PPWoodland;
   margin: 0;
-  z-index: 2;
+  z-index: 12;
   @media screen and (max-width: 935px) {
     font-size: 1.625rem;
     transform: translate(0%, 0);

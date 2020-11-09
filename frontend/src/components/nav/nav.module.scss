@@ -1,16 +1,16 @@
 @import "../../assets/styles/constants.scss";
 
 .nav__container {
-  z-index: 1;
-  position: absolute;
+  position: fixed;
   top: 58px;
   left: 7vw;
   width: 86vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  z-index: 10;
+
   @media screen and (max-width: 935px) {
-    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,18 +25,10 @@
   }
 }
 
-.nav__containerIndex {
-  justify-content: flex-end;
-  .nav__list {
-    &:first-of-type {
-      margin-right: 24px;
-    }
-  }
-}
-
 .nav__list {
   display: flex;
   margin: 0;
+
   @media screen and (max-width: 935px) {
     font-size: 0.875rem;
     font-weight: 500;
@@ -69,12 +61,6 @@
 .nav__item {
   list-style: none;
   margin: 0 19px;
-  &:first-of-type {
-    margin-left: 0;
-  }
-  &:last-of-type {
-    margin-right: 0;
-  }
   position: relative;
   cursor: pointer;
   &:hover {
@@ -112,7 +98,11 @@
   display: none;
   @media screen and (max-width: 935px) {
     display: block;
-    margin-top: 3vh;
+    margin-top: 0vh;
+    width: 50%;
+  }
+  @media screen and (max-width: 700px) {
+    width: 100%;
   }
 }
 
@@ -128,11 +118,12 @@
 
 .nav__openBurger {
   display: none;
-  position: absolute;
+  position: fixed;
   right: 8.4vw;
   top: 5.2vh;
   cursor: pointer;
   font-size: 0.75rem;
+  z-index: 10;
   @media screen and (max-width: 935px) {
     display: block;
   }
