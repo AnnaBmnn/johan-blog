@@ -58,7 +58,7 @@ const Nav = ({ theme }) => {
             className={`${navStyles.nav__openBurger} js-open-burger`}
             onClick={clickHandlerOpenMenu}
           >
-            <img src={BurgerImg}></img>
+            <img src={BurgerImg} alt></img>
           </div>
           <Logo
             className={`is-outside  ${theme == "basic" ? "" : "is-for-index"}`}

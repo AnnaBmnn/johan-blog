@@ -34,6 +34,7 @@ module.exports = {
         queryLimit: 1000,
       },
     },
+    `gatsby-plugin-preact`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

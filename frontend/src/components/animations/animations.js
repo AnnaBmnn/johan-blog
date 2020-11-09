@@ -53,6 +53,7 @@ const App = () => {
       <img
         className={`${animationsStyles.animations__fireTache}`}
         src={animationFireTache}
+        alt="la couleur du feu"
       />
       <div
         className={`${animationsStyles.animations__objects}`}
@@ -65,10 +66,19 @@ const App = () => {
       <img
         className={`${animationsStyles.animations__guitare}`}
         src={imgGuitare}
+        alt="la guitare"
       />
 
-      <img className={`${animationsStyles.animations__vase}`} src={imgVase} />
-      <img className={`${animationsStyles.animations__tente}`} src={imgTente} />
+      <img
+        className={`${animationsStyles.animations__vase}`}
+        src={imgVase}
+        alt="le vase"
+      />
+      <img
+        className={`${animationsStyles.animations__tente}`}
+        src={imgTente}
+        alt="la tente"
+      />
     </div>
   )
 }
