@@ -114,6 +114,9 @@
     right: 8.4vw;
     top: 5.2vh;
   }
+  &:focus {
+    border: 2px solid blue;
+  }
 }
 
 .nav__openBurger {
@@ -126,5 +129,8 @@
   z-index: 10;
   @media screen and (max-width: 935px) {
     display: block;
+  }
+  &:focus {
+    border: 2px solid blue;
   }
 }

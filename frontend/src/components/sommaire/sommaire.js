@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Moment from "react-moment"
 
@@ -17,14 +18,17 @@ const Sommaire = ({ articles }) => {
             >
               {article.node.published_at}
             </Moment>
-            <Link
+            <AniLink
+              fade
+              duration={0.3}
               to={`/article/${article.node.slug}`}
               className={sommaireStyles.sommaire__link}
+              alt={sommaireStyles.sommaire__title}
             >
               <span
                 className={sommaireStyles.sommaire__title}
               >{`${article.node.title}`}</span>
-            </Link>
+            </AniLink>
           </li>
         )
       })}

@@ -1,5 +1,6 @@
 import React, { useEffect, createRef, useState } from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import lottie from "lottie-web"
 import animationLeef from "../../json/leef.json"
@@ -19,6 +20,20 @@ const Nav = ({ theme }) => {
   }
   const clickHandlerCloseMenu = () => {
     setOpen(false)
+  }
+  const handleBtnKeyUpClose = event => {
+    event = event || window.event
+    if (event.keyCode === 32) {
+      // contrôle la touche espace
+      this.clickHandlerCloseMenu(event)
+    }
+  }
+  const handleBtnKeyUpOpen = event => {
+    event = event || window.event
+    if (event.keyCode === 32) {
+      // contrôle la touche espace
+      this.clickHandlerOpenMenu(event)
+    }
   }
 
   useEffect(() => {
@@ -57,6 +72,9 @@ const Nav = ({ theme }) => {
           <div
             className={`${navStyles.nav__openBurger} js-open-burger`}
             onClick={clickHandlerOpenMenu}
+            role="button"
+            tabindex="0"
+            onKeyUp={handleBtnKeyUpOpen}
           >
             <img src={BurgerImg} alt></img>
           </div>
@@ -72,19 +90,25 @@ const Nav = ({ theme }) => {
               src={CloseImg}
               className={navStyles.nav__close}
               onClick={clickHandlerCloseMenu}
+              onKeyUp={handleBtnKeyUpClose}
+              role="button"
+              tabindex="0"
             ></img>
             <nav>
               <ul className={`${navStyles.nav__list} ${navStyles.nav__menu}`}>
                 {data.strapiHomepage.Nav.ListLinksLeft.map((item, i) =>
                   item.LinkTexte ? (
                     <li key={i} className={navStyles.nav__item}>
-                      <Link
+                      <AniLink
+                        fade
+                        duration={0.3}
                         className={navStyles.nav__link}
                         to={`/${item.LinkUrl}`}
                         activeClassName={`is-active`}
+                        alt={item.LinkTexte}
                       >
                         {item.LinkTexte}
-                      </Link>
+                      </AniLink>
                       <img
                         className={navStyles.nav__linkBg}
                         src={HoverImg}
@@ -111,12 +135,14 @@ const Nav = ({ theme }) => {
                         className={navStyles.nav__link}
                         href={item.LinkUrl}
                         target="_blank"
+                        alt={item.LinkTexte}
                       >
                         {item.LinkTexte}
                       </a>
                       <img
                         className={navStyles.nav__linkBg}
                         src={HoverImg}
+                        alt=""
                       ></img>
                     </li>
                   ) : (

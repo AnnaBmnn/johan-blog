@@ -25,6 +25,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: "gatsby-source-strapi",
       options: {
