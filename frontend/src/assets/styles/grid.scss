@@ -21,6 +21,10 @@
   }
 }
 
+.grid__col-10 {
+  grid-column: 2 / 12;
+}
+
 .grid__col-10-s {
   @media screen and (max-width: 600px) {
     grid-column: 2 / 12;

@@ -4,6 +4,7 @@
   right: 13.5vw;
   top: 32vh;
   width: 4.5vw;
+  z-index: 0;
   @media screen and (max-width: 600px) {
     width: 14vw;
     top: 14vh;
@@ -27,8 +28,11 @@
   z-index: 1;
   position: fixed;
   left: 20vw;
-  bottom: -10vh;
+  bottom: -7vh;
   width: 25vw;
+  @media screen and (max-width: 1300px) {
+    bottom: -10vh;
+  }
   @media screen and (max-width: 600px) {
     display: none;
   }
@@ -48,7 +52,7 @@
   z-index: 1;
   position: fixed;
   right: 25vw;
-  top: 80vh;
+  top: 72vh;
   width: 16vw;
   @media screen and (max-width: 600px) {
     right: unset;
@@ -62,7 +66,7 @@
   z-index: 1;
   position: fixed;
   right: 8vw;
-  top: 65vh;
+  top: 60vh;
   width: 13vh;
   @media screen and (max-width: 600px) {
     width: 10vh;

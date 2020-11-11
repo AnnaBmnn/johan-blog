@@ -5,7 +5,6 @@ import ArticleHeaderComponent from "../articleHeader/articleHeader"
 import PlaylistsComponent from "../playlists/playlists"
 import MediasComponent from "../medias/medias"
 
-import SeparatorComponent from "../separator/separator"
 import { MDXProvider } from "@mdx-js/react"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
@@ -38,7 +37,6 @@ const Article = ({ articleData }) => {
           )}
         </div>
       </div>
-      <SeparatorComponent></SeparatorComponent>
     </div>
   )
 }
