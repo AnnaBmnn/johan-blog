@@ -13,14 +13,18 @@
   @media screen and (max-width: 700px) {
     flex-direction: column;
     align-items: flex-start;
+    padding: 8px 7vw 10px;
   }
 }
 .credits__title {
   list-style: none;
   margin: 0;
   font-size: 0.75rem;
+  font-weight: 700;
+  font-family: $PPWoodland;
+
   @media screen and (max-width: 700px) {
-    margin: 3px 0 5px;
+    margin: 0;
   }
 }
 
