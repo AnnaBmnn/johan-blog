@@ -109,12 +109,13 @@
 .animations__vase {
   z-index: 1;
   position: fixed;
-  right: 7vw;
-  top: 60vh;
-  width: 13vh;
+  right: 5vw;
+  top: 55vh;
+  width: 34vh;
   @media screen and (max-width: 600px) {
-    width: 12vh;
-    top: 55vh;
+    width: 32vh;
+    top: 47vh;
+    right: -10vw;
   }
 }
 
