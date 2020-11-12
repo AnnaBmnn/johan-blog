@@ -6,7 +6,6 @@ import "../assets/styles/main.scss"
 
 import Nav from "./nav/nav"
 import Seo from "./seo"
-import CreditsComponent from "./credits/credits"
 
 const Layout = ({ children, theme }) => (
   <StaticQuery
@@ -22,14 +21,6 @@ const Layout = ({ children, theme }) => (
               }
             }
           }
-          Credits {
-            CreditsTitle
-            CreditsList {
-              CreditsListsLabel
-              CreditsListName
-              CreditsListUrl
-            }
-          }
         }
       }
     `}
@@ -42,10 +33,6 @@ const Layout = ({ children, theme }) => (
         />
         <Nav theme={theme} />
         <main className={`theme--${theme}`}>{children}</main>
-        <CreditsComponent
-          classNameProp={`theme--${theme}`}
-          credits={data.strapiHomepage.Credits}
-        />
       </>
     )}
   />

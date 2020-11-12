@@ -14,6 +14,18 @@
   grid-column: 1 / 13;
 }
 
+.grid__col-12-m {
+  @media screen and (max-width: 1000px) {
+    grid-column: 1 / 13 !important;
+  }
+}
+
+.grid__col-12-s {
+  @media screen and (max-width: 600px) {
+    grid-column: 1 / 13 !important;
+  }
+}
+
 .grid__col-8 {
   grid-column: 1 / 9;
   @media screen and (max-width: 600px) {
@@ -25,9 +37,15 @@
   grid-column: 2 / 12;
 }
 
+.grid__col-10-m {
+  @media screen and (max-width: 900px) {
+    grid-column: 2 / 12 !important;
+  }
+}
+
 .grid__col-10-s {
   @media screen and (max-width: 600px) {
-    grid-column: 2 / 12;
+    grid-column: 2 / 12 !important;
   }
 }
 

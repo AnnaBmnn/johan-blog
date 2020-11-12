@@ -28,10 +28,10 @@
 .nav__list {
   display: flex;
   margin: 0;
+  font-weight: 500;
 
   @media screen and (max-width: 935px) {
     font-size: 0.875rem;
-    font-weight: 500;
   }
 }
 
@@ -60,7 +60,7 @@
 
 .nav__item {
   list-style: none;
-  margin: 0 19px;
+  margin: 0 0 0 38px;
   position: relative;
   cursor: pointer;
   &:hover {
@@ -73,7 +73,7 @@
 .nav__linkBg {
   z-index: -1;
   pointer-events: none;
-  content: url(../../images/hover.png);
+  // content: url(../../images/hover.png);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -112,7 +112,8 @@
     display: block;
     position: absolute;
     right: 8.4vw;
-    top: 5.2vh;
+    width: 39px;
+    top: 4.8vh;
   }
   &:focus {
     border: 2px solid blue;

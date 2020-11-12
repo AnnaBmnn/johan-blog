@@ -10,6 +10,9 @@
     top: 14vh;
     right: 7.5vw;
   }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .animations__fire {
@@ -22,19 +25,22 @@
     width: 16vw;
     top: 15vh;
     right: 7vw;
+    display: none;
   }
 }
 .animations__objects {
   z-index: 1;
   position: fixed;
   left: 20vw;
-  bottom: -7vh;
-  width: 25vw;
+  bottom: 0;
+  width: 31vw;
   @media screen and (max-width: 1300px) {
-    bottom: -10vh;
+    bottom: 0vh;
   }
   @media screen and (max-width: 600px) {
-    display: none;
+    left: 33vw;
+    bottom: -19vh;
+    width: 111vw;
   }
 }
 .animations__leef {
@@ -58,19 +64,19 @@
     right: unset;
     left: 8vw;
     width: 50vw;
-    top: 65vh;
+    top: 68vh;
   }
 }
 
 .animations__vase {
   z-index: 1;
   position: fixed;
-  right: 8vw;
+  right: 7vw;
   top: 60vh;
   width: 13vh;
   @media screen and (max-width: 600px) {
-    width: 10vh;
-    top: 50vh;
+    width: 12vh;
+    top: 55vh;
   }
 }
 

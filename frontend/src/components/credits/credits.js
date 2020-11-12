@@ -2,16 +2,17 @@ import React from "react"
 
 import creditsStyles from "./credits.module.scss"
 
-const Credits = ({ classNameProp, credits }) => {
+const Credits = ({ credits }) => {
   return (
-    <footer className={` ${classNameProp} `}>
+    <footer>
       <div className={`${creditsStyles.credits__section} `}>
-        <h2
-          className={`${creditsStyles.credits__title}`}
-        >{`${credits.CreditsTitle} : `}</h2>
         <ul className={creditsStyles.credits__list}>
+          <li
+            className={`${creditsStyles.credits__title}`}
+          >{`${credits.CreditsTitle} `}</li>
           {credits.CreditsList.map((item, i) => (
             <li className={creditsStyles.credits__credit} key={i}>
+              {`${item.CreditsListsLabel} : `}
               <a
                 className={creditsStyles.credits__link}
                 target="_blank"
@@ -21,7 +22,6 @@ const Credits = ({ classNameProp, credits }) => {
               >
                 {`${item.CreditsListName} `}
               </a>
-              {`(${item.CreditsListsLabel})`}
             </li>
           ))}
         </ul>

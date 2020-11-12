@@ -17,7 +17,9 @@ const Article = ({ articleData }) => {
         <ArticleHeaderComponent
           articleData={articleData}
         ></ArticleHeaderComponent>
-        <div className={`grid__col-6--center ${articleStyles.article__txt}`}>
+        <div
+          className={`grid__col-6--center grid__col-12-m grid__col-10-s ${articleStyles.article__txt}`}
+        >
           <MDXProvider>
             <MDXRenderer>
               {articleData.childStrapiArticleContent.childMdx.body}

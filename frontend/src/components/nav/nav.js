@@ -6,12 +6,19 @@ import lottie from "lottie-web"
 import animationLeef from "../../json/leef.json"
 import Logo from "../logo/logo"
 import Img from "../../images/menu.svg"
-import HoverImg from "../../images/hover.svg"
+import Hover1Img from "../../images/1.svg"
+import Hover2Img from "../../images/2.svg"
+import Hover3Img from "../../images/3.svg"
+import Hover4Img from "../../images/4.svg"
+import Hover5Img from "../../images/5.svg"
+import Hover6Img from "../../images/6.svg"
 import CloseImg from "../../images/Close.svg"
 import BurgerImg from "../../images/burger.svg"
 import navStyles from "./nav.module.scss"
 
 const Nav = ({ theme }) => {
+  const HoverImgs = [Hover1Img, Hover2Img, Hover3Img]
+  const Hover2Imgs = [Hover4Img, Hover5Img, Hover6Img]
   const [open, setOpen] = useState(false)
   let animationLeefContainer = createRef()
 
@@ -99,19 +106,32 @@ const Nav = ({ theme }) => {
                 {data.strapiHomepage.Nav.ListLinksLeft.map((item, i) =>
                   item.LinkTexte ? (
                     <li key={i} className={navStyles.nav__item}>
-                      <AniLink
-                        fade
-                        duration={0.3}
-                        className={navStyles.nav__link}
-                        to={`/${item.LinkUrl}`}
-                        activeClassName={`is-active`}
-                        alt={item.LinkTexte}
-                      >
-                        {item.LinkTexte}
-                      </AniLink>
+                      {i === 0 ? (
+                        <AniLink
+                          fade
+                          duration={0.3}
+                          className={navStyles.nav__link}
+                          to={`/${item.LinkUrl}`}
+                          activeClassName={`is-active`}
+                          alt={item.LinkTexte}
+                        >
+                          {item.LinkTexte}
+                        </AniLink>
+                      ) : (
+                        <a
+                          className={navStyles.nav__link}
+                          href={item.LinkUrl}
+                          target="_blank"
+                          alt={item.LinkTexte}
+                          rel="noreferrer"
+                        >
+                          {item.LinkTexte}
+                        </a>
+                      )}
+
                       <img
                         className={navStyles.nav__linkBg}
-                        src={HoverImg}
+                        src={HoverImgs[i]}
                       ></img>
                     </li>
                   ) : (
@@ -135,13 +155,14 @@ const Nav = ({ theme }) => {
                         className={navStyles.nav__link}
                         href={item.LinkUrl}
                         target="_blank"
+                        rel="noreferrer"
                         alt={item.LinkTexte}
                       >
                         {item.LinkTexte}
                       </a>
                       <img
                         className={navStyles.nav__linkBg}
-                        src={HoverImg}
+                        src={Hover2Imgs[i % 3]}
                         alt=""
                       ></img>
                     </li>
