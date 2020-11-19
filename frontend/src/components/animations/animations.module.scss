@@ -38,6 +38,7 @@
     bottom: 0vh;
   }
   @media screen and (max-width: 600px) {
+    display: none;
     left: 27vw;
     top: 64vh;
     width: 111vw;
@@ -96,14 +97,15 @@
 .animations__guitare {
   z-index: 1;
   position: fixed;
-  right: 25vw;
-  top: 72vh;
-  width: 16vw;
+  right: 27vw;
+  top: 69vh;
+  width: 20vw;
   @media screen and (max-width: 600px) {
+    position: absolute;
     right: unset;
-    left: 8vw;
-    width: 50vw;
-    top: 68vh;
+    left: 1vw;
+    width: 61vw;
+    top: 65vh;
   }
 }
 
@@ -114,9 +116,10 @@
   top: 55vh;
   width: 34vh;
   @media screen and (max-width: 600px) {
-    width: 32vh;
+    position: absolute;
+    width: 31vh;
     top: 46vh;
-    right: -15vw;
+    right: -3vw;
   }
 }
 

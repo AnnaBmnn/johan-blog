@@ -6,9 +6,8 @@ import animationFireTache from "../../images/fire__tache.png"
 import animationObjects from "../../json/objects.json"
 import animationLeef from "../../json/leef.json"
 import animationVase from "../../json/vase.json"
-import imgGuitare from "../../images/guitare.svg"
+import animationGuitare from "../../json/guitare.json"
 import imgTente from "../../images/tente.svg"
-// import imgVase from "../../images/vase.svg"
 import animationsStyles from "./animations.module.scss"
 
 const App = () => {
@@ -16,6 +15,7 @@ const App = () => {
   let animationObjectsContainer = createRef()
   let animationLeefContainer = createRef()
   let animationVaseContainer = createRef()
+  let animationGuitareContainer = createRef()
 
   useEffect(() => {
     const animFire = lottie.loadAnimation({
@@ -46,11 +46,19 @@ const App = () => {
       autoplay: true,
       animationData: animationVase,
     })
+    const animGuitare = lottie.loadAnimation({
+      container: animationGuitareContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animationGuitare,
+    })
     return () => {
       animFire.destroy()
       animLeef.destroy()
       animObjects.destroy()
       animVase.destroy()
+      animGuitare.destroy()
     }
   }, [])
 
@@ -73,10 +81,9 @@ const App = () => {
         className={`${animationsStyles.animations__leef}`}
         ref={animationLeefContainer}
       />
-      <img
+      <div
         className={`${animationsStyles.animations__guitare}`}
-        src={imgGuitare}
-        alt="la guitare"
+        ref={animationGuitareContainer}
       />
       <div
         className={`${animationsStyles.animations__vase}`}
