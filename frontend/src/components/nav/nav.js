@@ -19,17 +19,19 @@ import navStyles from "./nav.module.scss"
 const Nav = ({ theme }) => {
   const HoverImgs = [Hover1Img, Hover2Img, Hover3Img]
   const Hover2Imgs = [Hover4Img, Hover5Img, Hover6Img]
-  const body = document.querySelector(body)
   const [open, setOpen] = useState(false)
   let animationLeefContainer = createRef()
 
+  useEffect(() => {
+    // body = document.querySelector(body)
+  }, [])
   const clickHandlerOpenMenu = () => {
     setOpen(true)
-    body.classList.add("burgerOpen")
+    document.body.classList.add("burgerOpen")
   }
   const clickHandlerCloseMenu = () => {
     setOpen(false)
-    body.classList.add("burgerClose")
+    document.body.classList.remove("burgerOpen")
   }
   const handleBtnKeyUpClose = event => {
     event = event || window.event
