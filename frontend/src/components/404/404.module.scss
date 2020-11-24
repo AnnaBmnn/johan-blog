@@ -1,0 +1,38 @@
+@import "../../assets/styles/constants.scss";
+
+.quatreCentQuatre__container {
+  height: 92vh;
+  width: 100vw;
+  margin-bottom: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quatreCentQuatre__anim {
+  width: 220px;
+  transform: translateY(30px);
+  @media screen and (max-width: 700px) {
+    width: 250px;
+  }
+}
+
+.quatreCentQuatre__title {
+  margin-bottom: 10px;
+  font-size: 2.62rem;
+  font-family: $PPWoodland;
+  @media screen and (max-width: 700px) {
+    font-size: 2rem;
+  }
+}
+
+.quatreCentQuatre__txt {
+  width: 380px;
+  max-width: 100%;
+  text-align: center;
+  @media screen and (max-width: 700px) {
+    font-size: 1.125rem;
+    width: 240px;
+  }
+}

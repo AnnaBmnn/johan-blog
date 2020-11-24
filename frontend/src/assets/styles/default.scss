@@ -467,3 +467,13 @@ li > p {
     transform: translate(0%, 0%) !important;
   }
 }
+
+.burgerOpen {
+  position: fixed;
+  overflow: hidden;
+}
+
+.burgerClose {
+  position: static;
+  overflow: auto;
+}
