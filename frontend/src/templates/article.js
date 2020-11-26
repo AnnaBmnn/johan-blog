@@ -11,15 +11,9 @@ export const query = graphql`
       strapiId
       title
       content
-      publishedAt
       Seo {
         metaDescription
         metaTitle
-        shareImage {
-          image {
-            publicURL
-          }
-        }
       }
       Playlists {
         PlaylistUrl
@@ -44,7 +38,6 @@ const Article = ({ data }) => {
       <Seo
         title={articleData.Seo.metaTitle}
         description={articleData.Seo.metaDescription}
-        image={articleData.Seo.shareImage.image.publicURL}
       />
 
       <ArticleComponent articleData={articleData}></ArticleComponent>
