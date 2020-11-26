@@ -23,10 +23,6 @@
       "type": "richtext",
       "required": true
     },
-    "publishedAt": {
-      "type": "datetime",
-      "required": true
-    },
     "status": {
       "type": "enumeration",
       "enum": [

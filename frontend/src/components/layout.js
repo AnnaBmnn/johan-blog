@@ -15,11 +15,6 @@ const Layout = ({ children, theme }) => (
           Seo {
             metaTitle
             metaDescription
-            shareImage {
-              image {
-                publicURL
-              }
-            }
           }
         }
       }
@@ -29,7 +24,6 @@ const Layout = ({ children, theme }) => (
         <Seo
           title={data.strapiHomepage.Seo.metaTitle}
           description={data.strapiHomepage.Seo.metaDescription}
-          image={data.strapiHomepage.Seo.shareImage.image.url}
         />
         <Nav theme={theme} />
         <main className={`theme--${theme}`}>{children}</main>

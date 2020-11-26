@@ -8,10 +8,7 @@ import Seo from "../components/seo"
 
 export const query = graphql`
   query Ideas {
-    articles: allStrapiArticle(
-      filter: { status: { eq: "published" } }
-      sort: { fields: [publishedAt], order: DESC }
-    ) {
+    articles: allStrapiArticle(filter: { status: { eq: "published" } }) {
       edges {
         node {
           slug
