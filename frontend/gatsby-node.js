@@ -44,7 +44,6 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   const CategoryTemplate = require.resolve("./src/templates/category.js")
-
   categories.forEach((category, index) => {
     createPage({
       path: `/category/${category.node.slug}`,
