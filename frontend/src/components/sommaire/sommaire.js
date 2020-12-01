@@ -9,7 +9,8 @@ const Sommaire = ({ articles }) => {
   return (
     <ul className={sommaireStyles.sommaire__section}>
       {articles.map((article, i) => {
-        return (
+        return article.node.slug !==
+          "article-avec-tous-les-types-de-contenu" ? (
           <li className={sommaireStyles.sommaire__item} key={article.node.slug}>
             <Moment
               format="DD.MM.YYYY"
@@ -29,6 +30,8 @@ const Sommaire = ({ articles }) => {
               >{`${article.node.title}`}</span>
             </AniLink>
           </li>
+        ) : (
+          ""
         )
       })}
     </ul>
